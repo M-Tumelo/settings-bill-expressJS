@@ -1,3 +1,7 @@
+# Travis Badge [![Build Status](https://app.travis-ci.com/M-Tumelo/settings-bill-expressJS.svg?branch=main)](https://app.travis-ci.com/M-Tumelo/settings-bill-expressJS)
+
+Output travis badge
+
 # Introduction to creating web apps with ExpressJS
 
 In this document we will explore how to create web applications with [ExpressJS](http://http://expressjs.com/).
