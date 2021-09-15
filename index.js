@@ -19,7 +19,9 @@ app.use(express.static('public'));
 app.get("/", function(req, res){
      res.render("index",{
        settings_bill: settings.getSettings(),
-      totals: settings.totals()
+      totals: settings.totals(),
+      warning: settings.hasReachedWarningLevel(),
+      criticalLevel: settings.hasReachedCriticalLevel()
       });
    });
 app.post("/settings", function(req, res){

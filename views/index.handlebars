@@ -35,7 +35,11 @@
                 <input type="radio" value="sms" name="billItemType" class="billItemTypeWithSettings">
                 <span class="label-body" >SMS</span>
               </label>
+              {{#if criticalLevel}}
               <button class="button-primary" type="submit" name="button">Add</button>
+              {{else}}
+              <button class="button-primary" type="submit" name="button">Add</button>
+              {{/if}}
 </form>
               <h5>Totals</h5>
                   <table>
@@ -55,7 +59,13 @@
                       <td>
                         <a href="/actions">Total</a>
                       </td>
+                      {{#if warning}}
+                      <td> R<span step=".01" class="totalSettings warning">{{totals.grandTotal}}</span> </td>
+                      {{else if criticalLevel}}
+                      <td> R<span step=".01" class="totalSettings danger">{{totals.grandTotal}}</span> </td>
+                      {{else}}
                       <td> R<span step=".01" class="totalSettings">{{totals.grandTotal}}</span> </td>
+                      {{/if}}
                     </tr>
                   </table>
 
