@@ -48,7 +48,6 @@ app.get("/actions", function(req, res){
 
 app.get("/actions/:billItemType", function(req, res){
   const billItemType= req.params.billItemType;
-  console.log("Hello");
   res.render('actions',{actions: settings.actionsFor(billItemType)})
    });
 let PORT = process.env.PORT || 300;
